@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>
+        Automated Irrigation System
+    </title>
+    <link rel="icon" type="image/png" href="./static/Images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta name="theme-color" content="#0066ff" />
+    <meta name="description" content="This is the Automated Irrigation System ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="./static/css/custom.css" />
+    <script src="./common.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="page-layout">
+            <div class="heading-box box">
+                <div class="header-data-area">
+                    <div class="heading">
+                        Automated Irrigation System
+                    </div>
+                </div>
+            </div>
+            <div class="active-area box">
+                <div class="action-item-box">
+                    <div class="imme-irrigation-btn-box">
+                        <a  id="immediate-btn" href="#" class="imme-irrigation-btn">
+                            <i class="fa fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="schd-irrigation-box">
+                        <span>Irrigate every day at: </span>
+                        <i class="fa fa-clock-o"></i>
+                        <input type="text" class="timepicker"/>
+                        <div class="sch-meaning-box">
+                            Next irrigation will happen <span id="next-irri-date"></span> at <span id="next-irri-time"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="log-box">
+                    <div class="status-layout">
+                        <div class="status-box">
+                            Status: <i id="status-color" class="fa fa-circle"></i>
+                        </div>
+                        <div class="log-box">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
