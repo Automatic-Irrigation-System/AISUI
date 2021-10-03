@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#immediate-btn").click(function () {
     callImmediateScheduleAPI();
   });
-
+  getHardwareHealth();
   setInterval(getHardwareHealth, 60000 * 60);
 });
 
