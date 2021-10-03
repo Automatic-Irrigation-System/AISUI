@@ -15,13 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
     callImmediateScheduleAPI();
   });
 
-  setInterval(getHardwareHealth, 3000);
+  setInterval(getHardwareHealth, 60000 * 60);
 });
 
 let getHardwareHealth = function () {
-  axios
-    .get(`${baseURL}/health?hardwareId=AISPI01`)
-    .then((response) => $("#status-color").css("color", "red"));
+  axios.get(`${baseURL}/health?hardwareId=AISPI01`).then((response) => {
+    console.log(response);
+    $("#status-color").css("color", response.data.health);
+  });
 };
 
 let handleScheduleTime = function (hour, min) {

@@ -124,3 +124,12 @@
   grid-template-rows: 100px auto;
   justify-items: center;
 }
+
+.status-box {
+  font-size: 28px;
+  align-self: center;
+}
+
+.log-display-list {
+  background-color: grey;
+}
