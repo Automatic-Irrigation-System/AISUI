@@ -9,7 +9,7 @@
 .page-layout {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 150px calc(100vh - 150px - 20px);
+  grid-template-rows: 100px calc(100vh - 150px - 20px);
 }
 .box {
   height: 100%;
@@ -26,13 +26,13 @@
 }
 .active-area {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
 }
 .heading {
   align-self: center;
   align-items: center;
   justify-self: center;
-  font-size: 50px;
+  font-size: 24px;
   color: white;
 }
 .header-data-area {
@@ -43,7 +43,7 @@
   width: 100%;
   justify-items: center;
   align-items: center;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 .imme-irrigation {
   border-radius: 50%;
@@ -121,13 +121,15 @@
 
 .status-layout {
   display: grid;
-  grid-template-rows: 100px auto;
+  /* grid-template-rows: auto; */
   justify-items: center;
+  /* align-content: center; */
 }
 
 .status-box {
-  font-size: 28px;
+  font-size: 20px;
   align-self: center;
+  /* align-content: center; */
 }
 
 .log-display-list {

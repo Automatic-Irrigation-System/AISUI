@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     callImmediateScheduleAPI();
   });
   getHardwareHealth();
-  setInterval(getHardwareHealth, 60000 * 60);
+  getIrrigationState();
+  setInterval(getHardwareHealth, 1000 * 60);
+  setInterval(getIrrigationState, 1000 * 15);
 });
 
 let getHardwareHealth = function () {
@@ -23,6 +25,24 @@ let getHardwareHealth = function () {
     console.log(response);
     $("#status-color").css("color", response.data.health);
   });
+};
+
+let getIrrigationState = function () {
+  axios
+    .get(`${baseURL}/hardwarestate?hardwareId=AISPI01&needCurrent=true`)
+    .then((response) => {
+      console.log(response);
+      let state;
+      switch (response.data.state) {
+        case "irrigation_complete":
+          state = "Completed!";
+          break;
+        case "irrigating":
+          state = "Irrigating";
+          break;
+      }
+      $("#irrigation-state")[0].innerText = state;
+    });
 };
 
 let handleScheduleTime = function (hour, min) {
