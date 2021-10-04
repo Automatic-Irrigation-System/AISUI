@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   getHardwareHealth();
   getIrrigationState();
   setInterval(getHardwareHealth, 1000 * 60);
-  setInterval(getIrrigationState, 1000 * 15);
+  setInterval(getIrrigationState, 1000 * 5);
 });
 
 let getHardwareHealth = function () {
@@ -70,7 +70,7 @@ let callScheduleAPI = function (scheduledTime) {
   };
   axios
     .post(`${baseURL}/schedule`, request)
-    .then((response) => console.log(response));
+    .then((response) => alert("Sent schedule irrigation request!"));
 };
 
 let callImmediateScheduleAPI = function () {
@@ -79,5 +79,5 @@ let callImmediateScheduleAPI = function () {
   };
   axios
     .post(`${baseURL}/immediateschedule`, request)
-    .then((response) => console.log(response));
+    .then((response) => alert("Sent immediate irrigation request!"));
 };
