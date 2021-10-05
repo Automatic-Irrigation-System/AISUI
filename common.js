@@ -40,7 +40,7 @@ function setWithExpiry(key, value) {
   // as well as the time when it's supposed to expire
   const item = {
     value: value,
-    expiry: now.getTime() + 1000 * 60 * 60 * 24,
+    expiry: now.getTime() + 1000 * 60 * 60 * 2,
   };
   localStorage.setItem(key, JSON.stringify(item));
 }
