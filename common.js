@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   getHardwareHealth();
   getIrrigationState();
-  setInterval(getHardwareHealth, 1000 * 60);
+  setInterval(getHardwareHealth, 1000 * 5);
   setInterval(getIrrigationState, 1000 * 5);
 });
 
